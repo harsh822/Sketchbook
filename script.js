@@ -27,6 +27,9 @@ window.addEventListener("load", () => {
   canvas.addEventListener("mousedown", startPosition);
   canvas.addEventListener("mouseup", finishedPosition);
   canvas.addEventListener("mousemove", draw);
+  canvas.addEventListener("ontouchstart", startPosition);
+  canvas.addEventListener("ontouchend", finishedPosition);
+  canvas.addEventListener("ontouchmove", draw);
 });
 
 //For resizing the canvas panel
