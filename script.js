@@ -23,13 +23,23 @@ window.addEventListener("load", () => {
     ctx.beginPath();
     ctx.moveTo(e.clientX, e.clientY);
   }
+  function touchstart(event) {
+    startPosition(event.touches[0]);
+  }
+  function touchmove(event) {
+    draw(event.touches[0]);
+    event.preventDefault();
+  }
+  function touchend(event) {
+    finishedPosition(event.changedTouches[0]);
+  }
   //Event Listeners
   canvas.addEventListener("mousedown", startPosition);
   canvas.addEventListener("mouseup", finishedPosition);
   canvas.addEventListener("mousemove", draw);
-  canvas.addEventListener("ontouchstart", startPosition);
-  canvas.addEventListener("ontouchend", finishedPosition);
-  canvas.addEventListener("ontouchmove", draw);
+  canvas.addEventListener("touchstart", touchstart);
+  canvas.addEventListener("touchend", touchend);
+  canvas.addEventListener("touchmove", touchmove);
 });
 
 //For resizing the canvas panel
