@@ -19,10 +19,10 @@ window.addEventListener("load", () => {
     if (!painting) return;
     ctx.lineWidth = 10;
     ctx.lineCap = "round";
-    ctx.lineTo(e.clientX - 64, e.clientY - 57);
+    ctx.lineTo(e.clientX - 50, e.clientY - 57);
     ctx.stroke();
     ctx.beginPath();
-    ctx.moveTo(e.clientX - 64, e.clientY - 57);
+    ctx.moveTo(e.clientX - 50, e.clientY - 57);
   }
   function touchstart(event) {
     startPosition(event.touches[0]);

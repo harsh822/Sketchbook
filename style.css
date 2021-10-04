@@ -22,9 +22,9 @@
 }
 .left-bar {
   /* z-index: 1; */
-  width: 40px;
+  width: 50px;
   position: relative;
 }
 .canvas-div {
-  width: 96%;
+  width: calc(100% - 50px);
 }
