@@ -7,3 +7,24 @@
 #canvas {
   border: 2px solid black;
 }
+.navbar {
+  z-index: 1;
+}
+#canvas-contain {
+  display: inline-flex;
+  /* flex-direction: column; */
+  height: 100%;
+  width: 100%;
+  /* left: 0;
+  top: 0; */
+  /* overflow: hidden; */
+  position: fixed;
+}
+.left-bar {
+  /* z-index: 1; */
+  width: 40px;
+  position: relative;
+}
+.canvas-div {
+  width: 96%;
+}
